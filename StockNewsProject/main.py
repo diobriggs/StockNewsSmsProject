@@ -42,7 +42,7 @@ if 0 < weekday <= 5:
         if abs(percentage_inc_dec) >= 5:
             ## STEP 2: Use https://newsapi.org
             # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
-            news_response = requests.get(f"https://newsapi.org/v2/everything?q={COMPANY_NAME}&from=2024-07-05&sortBy=popularity&apiKey=03e67f2432774cf79b5389e8e385544e")
+            news_response = requests.get(f"https://newsapi.org/v2/everything?q={COMPANY_NAME}&from=2024-07-05&sortBy=popularity&apiKey={news_api_key}")
             news_meta_data = news_response.json()
             news_articles = news_meta_data["articles"]
             articles_to_send = []
